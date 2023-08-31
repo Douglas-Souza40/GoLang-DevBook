@@ -12,7 +12,13 @@ func main() {
 
 	auxiliar.Escrever()
 
-	erro := checkmail.ValidateFormat("teste@gmail.com")
+	//colocar um emailvalido para testar
+	err := checkmail.ValidateFormat("teste")
 
-	fmt.Println(erro)
+	if err != nil {
+		fmt.Println(err)
+	} else {
+		fmt.Println("Não teve erro no validador de email")
+	}
+
 }

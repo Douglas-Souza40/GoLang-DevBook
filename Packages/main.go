@@ -3,6 +3,8 @@ package main
 import (
 	"fmt"
 	"modulo/auxiliar"
+
+	"github.com/badoux/checkmail"
 )
 
 func main() {
@@ -10,4 +12,7 @@ func main() {
 
 	auxiliar.Escrever()
 
+	erro := checkmail.ValidateFormat("teste@gmail.com")
+
+	fmt.Println(erro)
 }
